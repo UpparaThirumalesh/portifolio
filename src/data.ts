@@ -36,8 +36,16 @@ export const PROJECTS: Project[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
+    {
+      id: 1,
+      title: "Graph Theory",
+      issuer: "Algo University",
+      date: "2025",
+      skills: ["Graph Theory", "Data Structures", "Algorithms", "Problem Solving"],
+      credentialId: "ALGO-GRAPH-XXXXX"
+  }
   {
-    id: 1,
+    id: 2,
     title: "Data Science for Engineers – NPTEL",
     issuer: "NPTEL & IIT Madras",
     date: "2024",
@@ -45,13 +53,14 @@ export const CERTIFICATIONS: Certification[] = [
     credentialId: "NPTEL-DS-81920"
   },
   {
-    id: 2,
+    id: 3,
     title: "Internet of Things – NPTEL",
     issuer: "NPTEL & IIT Kharagpur",
     date: "2024",
     skills: ["Internet of Things", "Sensors", "Networking", "Microcontrollers"],
     credentialId: "NPTEL-IOT-99231"
   }
+  
 ];
 
 export const EDUCATION: EducationItem[] = [
@@ -59,7 +68,7 @@ export const EDUCATION: EducationItem[] = [
     institution: "National Institute of Technology, Tadepalligudem",
     degree: "B.Tech in Electrical and Electronics Engineering",
     specialization: "Duration: Nov 2022 - May 2026",
-    grade: "CGPA: 7.95",
+    grade: "CGPA: 8.02",
     logo: "NIT AP"
   },
   {
@@ -73,7 +82,7 @@ export const EDUCATION: EducationItem[] = [
 
 export const ACHIEVEMENTS: AchievementItem[] = [
   {
-    title: "Full Stack Developer Intern",
+    title: "Software Engineer Intern",
     description: "Designed core REST APIs, Google Maps integrations, and Firebase layers for Kooli App at Ram (India) Smart Digital AI Solutions Pvt. Ltd.",
     iconType: "briefcase"
   },
