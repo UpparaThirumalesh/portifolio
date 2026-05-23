@@ -36,31 +36,61 @@ export const PROJECTS: Project[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-    {
-      id: 1,
-      title: "Graph Theory",
-      issuer: "Algo University",
-      date: "2025",
-      skills: ["Graph Theory", "Data Structures", "Algorithms", "Problem Solving"],
-      credentialId: "ALGO-GRAPH-XXXXX"
-  }
+  {
+    id: 1,
+    title: "Graph Theory",
+    issuer: "Algo University",
+    date: "2025",
+    skills: [
+      "Graph Theory",
+      "Data Structures",
+      "Algorithms",
+      "Problem Solving"
+    ],
+    credentialId: "ALGO-GRAPH-XXXXX"
+  },
+
   {
     id: 2,
     title: "Data Science for Engineers – NPTEL",
     issuer: "NPTEL & IIT Madras",
     date: "2024",
-    skills: ["Data Science", "Python", "R Programming", "Predictive Modelling"],
+    skills: [
+      "Data Science",
+      "Python",
+      "R Programming",
+      "Predictive Modelling"
+    ],
     credentialId: "NPTEL-DS-81920"
   },
+
   {
     id: 3,
     title: "Internet of Things – NPTEL",
     issuer: "NPTEL & IIT Kharagpur",
     date: "2024",
-    skills: ["Internet of Things", "Sensors", "Networking", "Microcontrollers"],
+    skills: [
+      "Internet of Things",
+      "Sensors",
+      "Networking",
+      "Microcontrollers"
+    ],
     credentialId: "NPTEL-IOT-99231"
+  },
+
+  {
+    id: 4,
+    title: "Discrete Mathematics – NPTEL",
+    issuer: "NPTEL",
+    date: "2026",
+    skills: [
+      "Discrete Mathematics",
+      "Logic",
+      "Graph Theory",
+      "Combinatorics"
+    ],
+    credentialId: "NPTEL-DM-90PERCENT"
   }
-  
 ];
 
 export const EDUCATION: EducationItem[] = [
