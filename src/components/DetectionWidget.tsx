@@ -47,7 +47,7 @@ const TEST_ITEMS: MockItem[] = [
     confidence: 97.5,
     color: "from-slate-500 to-gray-600",
     icon: Flame
-  }
+  },
 ];
 
 export default function DetectionWidget() {

@@ -278,7 +278,7 @@ export default function App() {
                   </div>
 
                   <p id="hero-subtitle" className="text-sm md:text-base text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed pt-2">
-                    Electrical &amp; Electronics Engineering student at NIT Andhra Pradesh with passion for Full Stack Software engineering.
+                    Electrical &amp; Electronics Engineering student at NIT Andhra Pradesh Aspiring Analyst Engineering.
                   </p>
                 </div>
 
@@ -590,7 +590,7 @@ export default function App() {
                     Technical Expertise
                   </h2>
                   <p className="text-xs md:text-sm text-slate-400 font-medium leading-relaxed">
-                    Deep Learning, Artificial Intelligence, and Software engineering expertise fields compiled dynamically.
+                    Andriod Application Developer and Software engineering expertise fields compiled dynamically.
                   </p>
                 </div>
 
