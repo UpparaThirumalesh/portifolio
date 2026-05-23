@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { CERTIFICATIONS, EDUCATION } from '../data';
 import {
   Award,
-  GraduationCap,
-  CheckCircle,
-  Star,
-  Sparkles,
-  BookOpen
+  GraduationCap
 } from 'lucide-react';
 
 interface CertsSkillsEducationWidgetProps {
@@ -18,7 +14,6 @@ export default function CertsSkillsEducationWidget({
 }: CertsSkillsEducationWidgetProps) {
 
   const [selectedCertId, setSelectedCertId] = useState<number>(1);
-  const [showScoreBreakdown, setShowScoreBreakdown] = useState(false);
 
   const selectedCert =
     CERTIFICATIONS.find(
@@ -27,7 +22,7 @@ export default function CertsSkillsEducationWidget({
 
   // Academic scores
   const cgpa = 8.02;
-  const cgpaInPercentage = cgpa * 10; // 80.2%
+  const cgpaInPercentage = 80.2;
 
   const intermediateScore = 98.3;
 
@@ -37,34 +32,32 @@ export default function CertsSkillsEducationWidget({
 
   return (
     <div
-      id="certs-skills-education-widget"
       className="w-full bg-[#131D31] rounded-xl border border-slate-700/60 p-5 space-y-6 text-xs text-slate-300"
     >
 
-      {/* Certification Section */}
       {(viewMode === "all" || viewMode === "certifications") && (
         <div>
 
           <h4 className="font-semibold text-slate-100 text-sm flex items-center gap-2">
-            <Award className="w-4 h-4 text-amber-400"/>
+            <Award className="w-4 h-4 text-amber-400" />
             Verified Professional Credentials
           </h4>
 
           <div className="space-y-2 mt-3">
 
-            {CERTIFICATIONS.map(cert => (
+            {CERTIFICATIONS.map((cert) => (
 
               <button
                 key={cert.id}
                 onClick={() => setSelectedCertId(cert.id)}
-                className={`w-full p-3 rounded-lg border text-left ${
+                className={`w-full p-3 rounded-lg border text-left transition-all ${
                   selectedCertId === cert.id
                     ? "bg-indigo-600/15 border-indigo-500"
                     : "bg-slate-800 border-slate-700"
                 }`}
               >
 
-                <div className="font-bold">
+                <div className="font-bold text-white">
                   {cert.title}
                 </div>
 
@@ -78,17 +71,38 @@ export default function CertsSkillsEducationWidget({
 
           </div>
 
+          <div className="mt-4 bg-slate-900 p-3 rounded-lg border border-slate-700">
+
+            <div className="text-slate-400 mb-2">
+              Skills Verified:
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+
+              {selectedCert.skills.map((skill, index) => (
+
+                <span
+                  key={index}
+                  className="bg-indigo-500/15 text-indigo-300 px-2 py-1 rounded"
+                >
+                  {skill}
+                </span>
+
+              ))}
+
+            </div>
+
+          </div>
+
         </div>
       )}
-
-      {/* Education Section */}
 
       {(viewMode === "all" || viewMode === "education") && (
 
         <div className="border-t border-slate-700 pt-5">
 
           <h4 className="font-semibold text-slate-100 text-sm flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-indigo-400"/>
+            <GraduationCap className="w-4 h-4 text-indigo-400" />
             Education Timeline
           </h4>
 
@@ -109,9 +123,11 @@ export default function CertsSkillsEducationWidget({
                   {edu.degree}
                 </p>
 
-                <p className="text-slate-400">
-                  {edu.specialization}
-                </p>
+                {edu.specialization && (
+                  <p className="text-slate-400">
+                    {edu.specialization}
+                  </p>
+                )}
 
                 <p className="text-xs text-slate-500 mt-1">
                   {edu.grade}
@@ -123,43 +139,36 @@ export default function CertsSkillsEducationWidget({
 
           </div>
 
-          {/* Academic Score */}
+          <div className="mt-5 bg-slate-900 p-4 rounded-lg border border-slate-700">
 
-          <div className="mt-5 bg-slate-900 p-4 rounded-lg">
+            <h4 className="font-bold text-white mb-4">
+              Academic Scoreboard
+            </h4>
 
-            <div className="flex justify-between">
-
+            <div className="flex justify-between mb-3">
               <span>CGPA</span>
-
               <span className="font-bold text-white">
                 {cgpa}
               </span>
-
             </div>
 
-            <div className="flex justify-between">
-
+            <div className="flex justify-between mb-3">
               <span>Equivalent %</span>
-
               <span className="font-bold text-white">
                 {cgpaInPercentage}%
               </span>
-
             </div>
 
-            <div className="flex justify-between">
-
+            <div className="flex justify-between mb-3">
               <span>Intermediate Score</span>
-
               <span className="font-bold text-white">
                 {intermediateScore}%
               </span>
-
             </div>
 
-            <div className="flex justify-between border-t border-slate-700 mt-3 pt-3">
+            <div className="flex justify-between border-t border-slate-700 pt-3">
 
-              <span className="text-indigo-400">
+              <span className="text-indigo-400 font-bold">
                 Composite Score
               </span>
 

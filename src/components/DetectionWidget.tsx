@@ -37,7 +37,7 @@ const TEST_ITEMS: MockItem[] = [
     category: "Hazardous Waste",
     confidence: 99.1,
     color: "from-red-500 to-rose-600",
-    icon: alertBtn => AlertTriangle
+    icon: AlertTriangle
   },
   {
     name: "Soiled Tissue / Cigarette",
@@ -47,9 +47,8 @@ const TEST_ITEMS: MockItem[] = [
     confidence: 97.5,
     color: "from-slate-500 to-gray-600",
     icon: Flame
-  },
+  }
 ];
-
 export default function DetectionWidget() {
   const [selectedItemIdx, setSelectedItemIdx] = useState(0);
   const [activeStep, setActiveStep] = useState<number>(-1);
