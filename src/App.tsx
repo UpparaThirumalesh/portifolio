@@ -28,9 +28,10 @@ import CertsSkillsEducationWidget from './components/CertsSkillsEducationWidget'
 import ContactFormWidget from './components/ContactFormWidget';
 
 const TITLES = [
-  "Full Stack Developer",
   "Software Engineer",
-  "Electrical & Electronics Engineer",
+  "Application Engineer",
+  "Full Stack Developer",
+  "Andriod Application Developer",
   "DSA & Competitive Coder"
 ];
 
@@ -278,7 +279,7 @@ export default function App() {
                   </div>
 
                   <p id="hero-subtitle" className="text-sm md:text-base text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed pt-2">
-                    Electrical &amp; Electronics Engineering student at NIT Andhra Pradesh Aspiring Analyst Engineering.
+                    Electrical &amp; Electronics Engineering student at NIT Andhra Pradesh Aspiring Analyst Engineering Role.
                   </p>
                 </div>
 
@@ -299,7 +300,7 @@ export default function App() {
                   {[
                     { id: 'projects-metric', num: "4+", label: "Developed Projects", desc: "Collaborative & AI Modules", icon: Laptop, tabId: 'projects' },
                     { id: 'certifications-metric', num: "NPTEL", label: "IoT & Data Science", desc: "IIT Madras/Kgp Credentials", icon: Award, tabId: 'certifications' },
-                    { id: 'edu-metric', num: "7.95 CGPA", label: "NIT Andhra Pradesh", desc: "Electrical & Electronics Eng", icon: GraduationCap, tabId: 'education' },
+                    { id: 'edu-metric', num: "8.02 CGPA", label: "NIT Andhra Pradesh", desc: "Electrical & Electronics Eng", icon: GraduationCap, tabId: 'education' },
                     { id: 'problems-metric', num: "350+", label: "Problems Solved", desc: "LeetCode & HackerRank", icon: Code, tabId: 'about' }
                   ].map((metric, idx) => (
                     <button 
